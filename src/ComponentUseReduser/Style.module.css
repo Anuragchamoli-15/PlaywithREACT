@@ -1,0 +1,213 @@
+.container {
+  min-height: 97vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #151a25 0%,
+      #090b10 45%,
+      #050609 100%
+    );
+
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+
+/* Main Counter Card */
+
+.Counter {
+  width: 520px;
+  padding: 45px;
+
+  background: rgba(18, 21, 28, 0.85);
+
+  border: 1px solid #292f3b;
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(15px);
+
+  transition: 0.3s ease;
+}
+
+.Counter:hover {
+  border-color: #394352;
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.7),
+    0 0 30px rgba(0, 170, 255, 0.06);
+}
+
+
+/* Counter Number */
+
+.Counter h1 {
+  margin: 0 auto 40px;
+
+  width: 180px;
+  height: 130px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #0c0f14;
+
+  border: 1px solid #303846;
+  border-radius: 18px;
+
+  font-size: 70px;
+  font-weight: 700;
+
+  color: #e8f7ff;
+
+  text-shadow:
+    0 0 8px rgba(0, 190, 255, 0.7),
+    0 0 20px rgba(0, 190, 255, 0.3);
+
+  box-shadow:
+    inset 0 0 25px rgba(0, 170, 255, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+
+  transition: 0.25s ease;
+}
+
+.Counter h1:hover {
+  transform: scale(1.04);
+
+  border-color: #40505f;
+
+  box-shadow:
+    inset 0 0 30px rgba(0, 170, 255, 0.08),
+    0 0 25px rgba(0, 170, 255, 0.12);
+}
+
+
+/* Buttons Grid */
+
+.buttons {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px;
+}
+
+
+/* Buttons */
+
+.buttons button {
+  padding: 14px 18px;
+
+  background: #11151c;
+
+  color: #cbd3dc;
+
+  border: 1px solid #2c3440;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* Hover */
+
+.buttons button:hover {
+  background: #171d26;
+
+  color: #ffffff;
+
+  border-color: #00aaff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 12px rgba(0, 170, 255, 0.15);
+}
+
+
+/* Click */
+
+.buttons button:active {
+  transform: scale(0.96);
+}
+
+
+/* Reset Button */
+
+.buttons button:last-child {
+  grid-column: span 2;
+
+  color: #ff7272;
+
+  border-color: #472c32;
+
+  background: #151013;
+}
+
+.buttons button:last-child:hover {
+  color: #ff9696;
+
+  background: #211417;
+
+  border-color: #ff5c67;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(255, 70, 80, 0.15);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .Counter {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .Counter h1 {
+    width: 150px;
+    height: 110px;
+
+    font-size: 55px;
+  }
+
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .buttons button:last-child {
+    grid-column: span 1;
+  }
+}
