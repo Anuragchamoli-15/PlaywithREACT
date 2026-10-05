@@ -2,21 +2,31 @@ import { useReducer } from "react";
 import style from "./Style.module.css";
 
 function Reduceer(state, action) {
-  if (action.type === "INCREMENT") {
-    return state + 1;
-  } else if (action.type === "DECREMENT") {
-    return state - 1;
-  } else if (action.type === "ADD5") {
-    return state + 5;
-  } else if (action.type === "SUB5") {
-    return state - 5;
-  } else if (action.type === "ADD10") {
-    return state + 10;
-  } else if (action.type === "SUB10") {
-    return state - 10;
-  } else if (action.type === "RESET") {
-    return (state = 0);
+  switch (action.type) {
+    case "INCREMENT":
+      return state + 1;
+
+    case "DECREMENT":
+      return state - 1;
+
+    case "DECREMENT":
+      return state - 1;
+
+    case "ADD5":
+      return state +5;
+
+    case "SUB5":
+      return state - 5;
+
+    case "ADD10":
+      return state + 10;
+
+    case "SUB10":
+      return state - 10;
+
+    default :state = 0;
   }
+   
 
   return state;
 }
